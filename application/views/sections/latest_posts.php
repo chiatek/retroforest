@@ -33,6 +33,9 @@
             <?php $count++; ?>
 
         <?php endwhile; ?>
+        <div class="post col-md-12 col-sm-12">
+            <a href="<?php echo site_url('posts'); ?>" class="btn btn-secondary float-right mb-5">view all...</a>
+        </div>
     <?php endif; ?>   
 </div>
 

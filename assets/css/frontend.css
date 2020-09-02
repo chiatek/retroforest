@@ -404,7 +404,7 @@ body {
     color: #fff !important;
 }
 
-.page-link:hover {
+.page-link:hover, .active .page-link {
     background-color: #5a6268 !important;
     border-color: #545b62 !important;
 }
