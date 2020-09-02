@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/*-------------------------------------------------------------------------------------------*/
+/* Global Style   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #171717;
+    font-family: "Montserrat";
+    font-size: 100%;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Parallax   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.parallax-container {
+    padding: 2em;
+    height: 100vh;
+}
+
+.parallax-container h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 3em;
+    line-height: .9em;
+    margin-top: 2em;
+    opacity: 1;
+    -webkit-animation-name: headline;
+            animation-name: headline;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.parallax-container p {
+    line-height: 1.5em;
+    color: #fff;
+}
+
+.mountains, .forest, .clouds {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+  
+.mountains {
+    background: url("../img/uploads/mountains.png") center center/cover no-repeat;
+    top: -65%;
+    height: 1125px;
+    -webkit-animation-name: mountains;
+            animation-name: mountains;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+.clouds {
+    background: url("../img/uploads/clouds.png") center center/cover no-repeat;
+    top: 0;
+    height: 670px;
+    -webkit-animation-name: clouds;
+            animation-name: clouds;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.forest {
+    background: url("../img/uploads/forest.png") center center/cover no-repeat;
+    top: 25%;
+    height: 900px;
+}
+  
+@keyframes headline {
+    from {
+        opacity: 0;
+        margin-top: 1.5em;
+    }
+    to {
+        opacity: 1;
+        margin-top: 2em;
+    }
+}
+  
+@keyframes mountains {
+    from {
+        top: -70%;
+    }
+    to {
+        top: -65%;
+    }
+}
+  
+@keyframes clouds {
+    from {
+        top: -5%;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+  
+@media only screen and (min-width: 768px) {
+    .mountains {
+        top: -40%;
+    }
+
+    @keyframes mountains {
+        from {
+            top: -45%;
+        }
+        to {
+            top: -40%;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .parallax-container h1 {
+        font-size: 3.5em;
+    }
+    .mountains {
+        top: -25%;
+    }   
+
+    @keyframes mountains {
+        from {
+            top: -30%;
+        }
+        to {
+            top: -25%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .mountains {
+        top: -55%;
+    }
+
+    @keyframes mountains {
+        from {
+            top: -60%;
+        }
+        to {
+            top: -55%;
+        }
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Navbar   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.nav-logo {
+  width: 125px;
+}
+
+.navbar {
+    padding: 8px;
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: #000 !important;
+    margin: 2px 6px 0 6px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Page Content   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.page-content {
+    position: absolute;
+    top: 125%;
+    width: 100%;
+    background: #f9fafd;
+    z-index: 1000;
+}
+
+@media only screen and (min-width: 768px) {
+    .page-content {
+        top: 130%;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Header   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.header {
+    background: url("../img/uploads/mountains-sm.png") center center/cover no-repeat;
+    min-height: 183px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Featured  ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.featured {
+    background-color: #222;
+    padding: 4em 2em 4em 2em;
+}
+
+.featured h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+.featured p {
+    color: #fff;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.featured img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 576px) {
+    .featured-container {
+        position: relative;
+        min-height: 400px;
+    }
+    
+    .featured-text, .featured-image {
+        margin-top: 1em;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .featured-text {
+        right: 0;
+    }
+
+    .featured p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .featured h2 {
+        font-size: 2.25em;
+    }
+
+    .featured p {
+        font-size: 1.15em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .featured-container {
+        margin: 0 4em 0 4em;
+    }
+
+    .featured img {
+        max-width: 75%;
+    }
+
+    .featured p {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .featured-container {
+        margin: 0 10em 2em 10em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Latest Posts  ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.latest-posts {
+    margin: 3em 1em 3em 1em;
+}
+
+.post {
+    background-color: transparent;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.post-body p {
+    font-size: 0.85em;
+}
+
+.post-body a {
+    font-size: 0.75em;
+}
+
+.post-body h6 {
+    font-size: 0.80em;
+}
+
+.post-text {
+    font-family: "Montserrat";
+    font-size: 1em;
+}
+
+.post-title, .post-category {
+    text-transform: uppercase;
+}
+
+.post-category {
+    line-height: 2.5;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.latest-posts .row {
+    margin: 0 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .latest-posts {
+        margin: 4em 0 2em 0;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .latest-posts {
+        margin: 6em 10em 2em 10em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Carousel   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.carousel-content {
+    background-color: #f9fafd;
+}
+
+.carousel-caption {
+    background-color: #eee;
+    color: #222;
+    opacity: 0;
+    padding: 1em;
+    transition: .5s ease;
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel-content .item:hover .carousel-caption {
+        opacity: 80%;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Footer   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.page-footer {
+    background-color: #1a1c1e;
+}
+
+.footer-copyright {
+    font-size: 0.85em;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Blog   ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+.blog-container {
+    background: #f9fafd;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.blog-home, .blog-post {
+    width: 100%;
+    margin-top: 5.5em;
+}
+
+.page-link {
+    background: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #fff !important;
+}
+
+.page-link:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+.sidebar-widgets-column {
+    display: none;
+}
+
+.comments-header {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.comments-body {
+    margin-top: 1em;
+}
+
+.comments-body .form-label {
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    .blog-container {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .sidebar-widgets-column {
+        display: block;
+        width: 100%;
+        margin-top: 5em;
+    }
+
+    .widget-header {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    .widget-categories, .widget-tags {
+        margin-top: 6em;
+    }
+
+    .widget-categories a {
+        color: #777;
+        font-size: 0.9em;
+    }
+
+    .widget-categories a:hover {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .widget-body ul {
+        padding: 0.25em 0;
+    }
+
+    .widget-tags .widget-body ul {
+        list-style-type: none;
+    }
+
+    .widget-tags .widget-body ul li {
+        display: inline-block;
+        border: 1px solid #999;
+        color: #888;
+        font-size: 0.9em;
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .widget-tags .widget-body ul li:hover {
+        border: 1px solid #555;
+        color: #444;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog-container {
+        padding-left: 8em;
+        padding-right: 8em;
+    }
+}
