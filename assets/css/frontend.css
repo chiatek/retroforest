@@ -17,6 +17,23 @@ body {
             box-sizing: border-box;
 }
 
+.progress {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+.progress-bar {
+    background: #6c757d !important;
+}
+
+.fadeOut {
+    opacity: 0 !important;
+    transition: opacity 1s !important;
+}
+
 /*-------------------------------------------------------------------------------------------*/
 /* Parallax   ||---------------------------- */
 /*-------------------------------------------------------------------------------------------*/
@@ -24,6 +41,7 @@ body {
 .parallax-container {
     padding: 2em;
     height: 100vh;
+    display: none;
 }
 
 .parallax-container h1 {
@@ -51,7 +69,10 @@ body {
 }
   
 .mountains {
-    background: url("../img/uploads/mountains.png") center center/cover no-repeat;
+    /*background: url("../img/uploads/mountains.png") center center/cover no-repeat;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: -65%;
     height: 1125px;
     -webkit-animation-name: mountains;
@@ -61,17 +82,23 @@ body {
 }
 
 .clouds {
-    background: url("../img/uploads/clouds.png") center center/cover no-repeat;
+    /*background: url("../img/uploads/clouds.png") center center/cover no-repeat;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0;
     height: 670px;
     -webkit-animation-name: clouds;
             animation-name: clouds;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
 .forest {
-    background: url("../img/uploads/forest.png") center center/cover no-repeat;
+    /*background: url("../img/uploads/forest.png") center center/cover no-repeat;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 25%;
     height: 900px;
 }
@@ -98,7 +125,7 @@ body {
   
 @keyframes clouds {
     from {
-        top: -5%;
+        top: -20%;
         opacity: 0;
     }
     to {

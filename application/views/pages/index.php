@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>retro forest</title>
+	<title>Retro Forest</title>
 	<meta name="description" content="retro forest">
 	<meta name="keywords" content="">
 	<meta name="author" content="Steve Chiarelli">
@@ -20,6 +20,10 @@
 	<link rel="stylesheet" href="<?php echo site_url(config("css")); ?>">
 </head>
 <body>
+
+    <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+    </div>
 
 	<!-- Wrapper -->
 	<div class="wrapper">
@@ -50,42 +54,13 @@
     <!-- End Wrapper -->
 
     <!-- Base Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 	<script src="<?php echo site_url("assets/vendor/jquery/jquery-3.3.1.min.js"); ?>" type="text/javascript"></script>
 	<script src="<?php echo site_url("assets/vendor/bootstrap/js/popper.min.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("assets/vendor/bootstrap/js/bootstrap.min.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("assets/vendor/owlcarousel/owl.carousel.js"); ?>" type="text/javascript"></script>
-
-    <script>
-        window.onload = function() {
-            lax.setup() // init
-
-            const updateLax = () => {
-                lax.update(window.scrollY)
-                window.requestAnimationFrame(updateLax)
-            }
-
-            window.requestAnimationFrame(updateLax)
-        }
-
-        $(document).ready(function() {
-            $("#owl-slide").owlCarousel({
-                autoplay:true,
-                autoplayTimeout:10000,
-                loop: true,
-                lazyLoad : true,
-                items: 3,
-                dots: false,
-                stagePadding: 300,
-                responsive : {
-                    0 : {stagePadding: 0},
-                    600 : {stagePadding: 100},
-                    900 : {stagePadding: 200},
-                    1199 : {}
-                },
-            });
-        });
-    </script>
+    <script src="<?php echo site_url("assets/js/frontend.js"); ?>" type="text/javascript"></script>
 
 </body>
 </html>
