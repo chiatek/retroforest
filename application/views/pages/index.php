@@ -55,7 +55,7 @@
 
     <!-- Base Javascript -->
     <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script src="<?php echo site_url("assets/vendor/lax/lax.js"); ?>" type="text/javascript"></script>
 	<script src="<?php echo site_url("assets/vendor/jquery/jquery-3.3.1.min.js"); ?>" type="text/javascript"></script>
 	<script src="<?php echo site_url("assets/vendor/bootstrap/js/popper.min.js"); ?>" type="text/javascript"></script>
     <script src="<?php echo site_url("assets/vendor/bootstrap/js/bootstrap.min.js"); ?>" type="text/javascript"></script>
